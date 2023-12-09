@@ -67,3 +67,13 @@ function gameOver(a) {
     window.isGameOver = true;
     moves = 0;
 }
+
+function draw() {
+    var drawAlertElement = '<b>DRAW!!!</b><br><br>' + restartButton;
+    var div = document.createElement("div");
+    div.className = "alert";
+    div.innerHTML = drawAlertElement;
+    document.getElementsByTagName("body")[0].appendChild(div);
+    window.isGameOver = true;
+    moves = 0;
+}
