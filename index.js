@@ -12,10 +12,11 @@ function play(y) {
         moves++;
         if (playerTurn == "x") {
             playerTurn = "o";
-        } else if (playerTurn == "0") {
+        } else if (playerTurn == "o") {
             playerTurn = "x";
         }
     }
+
 
     checkWinner(1, 2, 3);
     checkWinner(4, 5, 6);
@@ -26,7 +27,8 @@ function play(y) {
     checkWinner(1, 5, 9);
     checkWinner(3, 5, 7);
 
-    if (moves = 9 && isGameOver == false) { draw(); }
+    if (moves == 9 && isGameOver == false) { draw(); }
+
 }
 
 function checkWinner(a, b, c) {
@@ -34,9 +36,9 @@ function checkWinner(a, b, c) {
     b--;
     c--;
     if ((span[a].dataset.player === span[b].dataset.player) && (span[b].dataset.player === span[c].dataset.player) && (span[a].dataset.player === span[c].dataset.player) && (span[a].dataset.player === "x" || span[a].dataset.player === "o") && isGameOver == false) {
-        span[a].parentNode.className += "activeBox";
-        span[b].parentNode.className += "activeBox";
-        span[c].parentNode.className += "activeBox";
+        span[a].parentNode.className += " activeBox";
+        span[b].parentNode.className += " activeBox";
+        span[c].parentNode.className += " activeBox";
         gameOver(a);
     }
 }
