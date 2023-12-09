@@ -50,3 +50,11 @@ function playAgain() {
     }
 }
 
+function resetGame() {
+    for (i = 0; i < span.length; i++) {
+        span[i].dataset.player = "none";
+        span[i].innerHTML = "&nbsp;";
+    }
+    playerTurn = "x";
+}
+
