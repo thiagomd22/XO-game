@@ -58,3 +58,12 @@ function resetGame() {
     playerTurn = "x";
 }
 
+function gameOver(a) {
+    var gameOverAlertElement = "<b>GAME OVER </b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Win !!! <br><br>' + restartButton;
+    var div = document.createElement("div");
+    div.className = "alert";
+    div.innerHTML = gameOverAlertElement;
+    document.getElementsByTagName("body")[0].appendChild(div);
+    window.isGameOver = true;
+    moves = 0;
+}
