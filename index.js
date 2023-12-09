@@ -40,3 +40,13 @@ function checkWinner(a, b, c) {
         gameOver(a);
     }
 }
+
+function playAgain() {
+    document.getElementsByClassName("alert")[0].parentNode.removeChild(document.getElementsByClassName("alert")[0]);
+    resetGame();
+    window.isGameOver = false;
+    for (var k = 0; k < span.length; k++) {
+        span[k].parentNode.className = span[k].parentNode.className.replace("activeBox", "");
+    }
+}
+
